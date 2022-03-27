@@ -1,0 +1,9 @@
+var replaceChain = (newBlocks) => {
+    if (isValidChain(newBlocks) && newBlocks.length > blockchain.length) {
+        console.log('Принятый блокчейн является валидным. Происходит замена текущего блокчейна на принятый');
+        blockchain = newBlocks;
+        broadcast(responseLatestMsg());
+    } else {
+        console.log('Принятый блокчейн не является валидным');
+    }
+};
